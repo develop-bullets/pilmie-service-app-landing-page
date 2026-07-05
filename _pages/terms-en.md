@@ -4,11 +4,11 @@ title: Terms of Service
 include_in_header: false
 ---
 
-[한국어 정본 보기 (Korean authoritative version) →](/terms/)
+[한국어 정본 (Korean authoritative version) →](/terms/) · [日本語 →](/terms-ja/)
 
 # Pilmie Terms of Service
 
-Effective date: July 4, 2026
+Effective date: July 5, 2026
 
 This document is a reference translation provided for convenience. The Korean version (이용약관) is the authoritative and legally binding version. In the event of any inconsistency between the Korean version and this English translation, the Korean version shall prevail (see Article 18).
 
@@ -37,7 +37,7 @@ The terms used in these Terms are defined as follows:
 
 1. The service agreement is formed when a prospective member agrees to these Terms and to the collection and use of personal information, logs in with a Google or Apple account, enters the required information such as a nickname, and applies for membership, and the Operator accepts the application.
 2. Only persons aged 14 or older may sign up for the Service, and the sign-up process requires confirmation that the applicant is 14 or older.
-3. The Operator may refuse to accept, or subsequently terminate, an application for membership that falls under any of the following:
+3. The Operator may refuse to accept an application for membership, or subsequently terminate the service agreement, if the application falls under any of the following:
    1. The applicant is under 14 years of age
    2. The applicant misappropriated another person's account or information
    3. The applicant has previously had their use restricted for violating these Terms
@@ -60,7 +60,7 @@ The Operator endeavors to protect members' personal information in accordance wi
    1. Book search (based on the NAVER book search API)
    2. Bookshelf management: per-book reading status (want to read / reading / finished), reading progress, and reading period records
    3. Creating and sharing reviews, star ratings, comments, and quoted passages
-   4. Following other members, liking content, blocking members, and reporting reviews
+   4. Following other members, liking content, blocking members, and reporting content and users
    5. Reading-support features such as reading goals and streaks
    6. Push notifications and in-app notifications
 2. Book information provided in the Service (bibliographic information, cover images, prices, etc.) is based on information provided by the book search API of NAVER Corp., and the Operator does not guarantee its accuracy, completeness, or currency.
@@ -73,7 +73,8 @@ The Operator endeavors to protect members' personal information in accordance wi
    1. Where there are substantial operational reasons, such as system inspection, replacement, failure, or communication outage
    2. Failure or suspension of underlying services provided by third parties (Google Firebase, the NAVER API, etc.)
    3. Force majeure events such as natural disasters or power outages
-3. With respect to changes to or suspension of the Service provided free of charge, the Operator is not liable unless the Operator acted intentionally or with gross negligence.
+3. The Operator may require installation of the latest version of the app when necessary for the safe and smooth provision of the Service, such as fixing security vulnerabilities or maintaining data integrity, in which case an update notice will be displayed on the app screen. Use of the Service may be restricted on older versions of the app on which the required update has not been installed.
+4. With respect to changes to or suspension of the Service provided free of charge, the Operator is not liable unless the Operator acted intentionally or with gross negligence.
 
 ## Article 9 (Members' Obligations)
 
@@ -105,7 +106,7 @@ The Operator endeavors to protect members' personal information in accordance wi
 
 ## Article 12 (Reports and Restrictions on Use)
 
-1. If a member determines that another member's review violates Article 9, the member may report it via the in-app report feature; reports concerning content other than reviews may be submitted to develop@bullets.co.kr. A member may use the block feature if they do not wish to see a particular member's content.
+1. If a member determines that another member's content (reviews, comments, or quoted passages) or another member violates Article 9, the member may report it via the in-app report feature; other reports may be submitted to develop@bullets.co.kr. A member may use the block feature if they do not wish to see a particular member's content.
 2. If a member violates these Terms, the Operator may, depending on the severity of the violation, take measures such as deleting content, temporarily restricting use of the Service, or terminating the service agreement (deleting the account).
 3. When the Operator takes a measure under Paragraph 2, it will notify the member of the reason and details. However, where urgent action is required, notice may be given after the measure is taken.
 4. A member who objects to a measure under Paragraph 2 may file an objection to develop@bullets.co.kr within 15 days of receiving the notice, and the Operator will review the objection and lift the measure if the objection is found justified.
@@ -141,8 +142,8 @@ The Operator endeavors to protect members' personal information in accordance wi
 
 ## Article 18 (Language)
 
-The Korean-language version of these Terms is the authoritative text. This English translation is provided for reference only, and in the event of any inconsistency in interpretation between the Korean version and the English version, the Korean version shall prevail.
+The Korean-language version of these Terms is the authoritative text. Translations into other languages, including English and Japanese, are provided for reference only, and in the event of any inconsistency in interpretation between the Korean version and a translated version, the Korean version shall prevail.
 
 ## Addendum
 
-These Terms take effect on July 4, 2026.
+These Terms take effect on July 5, 2026.
