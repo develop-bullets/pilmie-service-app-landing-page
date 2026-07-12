@@ -5,7 +5,7 @@
 출력: assets/og/og-<locale>.png  (Jekyll이 그대로 서빙, 재생성은 로컬에서만)
 
 디자인은 앱 repo의 tool/feature_graphic.py(Play 피처 그래픽, 1024x500)와 동일 계열:
-- 배경: 브랜드 앰버(#F4AA2B) → 마스코트 핑크(#F48FC2) 대각 그라데이션
+- 배경: 브랜드 로즈(#E8557F) → 마스코트 핑크(#F48FC2) 대각 그라데이션
 - 화이트 워드마크 "Pilmie" + 슬로건(스토어 부제 캐논), 우측 마스코트 배지 + 소프트 글로우
 - 화이트 텍스트는 이미 출시된 Play 피처 그래픽과 동일(소셜 카드는 사이트 히어로와 달리
   상호작용 WCAG 대상이 아니며, 브랜드 자산 일관성을 우선)
@@ -37,7 +37,7 @@ SLOGANS = {
 }
 
 # 브랜드 색 — lib/src/common/theme/app_colors.dart
-AMBER = (244, 170, 43)   # #F4AA2B accent
+ROSE = (232, 85, 127)    # #E8557F accent (2026-07-12 앰버에서 변경 — 앱 커밋 6faa384)
 PINK = (244, 143, 194)   # #F48FC2 마스코트 핑크
 WHITE = (255, 255, 255)
 
@@ -187,7 +187,7 @@ def main():
     if not mascot_src:
         raise SystemExit("마스코트 원본을 찾을 수 없음: " + " / ".join(MASCOT_CANDIDATES))
 
-    bg = _gradient_diag(CANVAS, AMBER, PINK).convert("RGBA")
+    bg = _gradient_diag(CANVAS, ROSE, PINK).convert("RGBA")
 
     mascot = Image.open(mascot_src).convert("RGBA")
     m_h = 400

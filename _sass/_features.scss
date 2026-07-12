@@ -53,7 +53,7 @@
 }
 
 @supports not (background: color-mix(in srgb, red 50%, blue)) {
-	.feature-card__icon { background: rgba(244, 170, 43, .16); }
+	.feature-card__icon { background: rgba(232, 85, 127, .16); }   // 로즈 #E8557F
 }
 
 .feature-card__title {
