@@ -15,7 +15,9 @@ hero:
   headline: Read together on Pilmie          # canon slogan
   sub: Log your reading, build streaks, and share reviews with fellow readers.   # canon one-liner
   lede: Pilmie is a cozy home for everything you read.     # Description hook
-  meta: iOS 16+ / Android
+  # State only "Free" (a fact at download). Do NOT promise "no ads / no subscription /
+  # no in-app purchases" — that forecloses future monetization.
+  meta: Free · iOS 16+ / Android
   mascot_alt: Pilmie mascot
 
 gallery:
