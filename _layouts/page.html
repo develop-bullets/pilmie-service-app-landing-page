@@ -3,7 +3,7 @@
 ---
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
 
 {% include head.html %}
 
@@ -15,7 +15,6 @@
                 {{ content }}
             </article>
         </div>
-        {% include appstoreimages.html %}
     </div>
 </body>
 
