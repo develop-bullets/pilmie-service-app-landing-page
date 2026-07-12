@@ -1,0 +1,15 @@
+{%- comment -%} 기능 7블록. 캐논 순서 고정. 인라인 SVG 아이콘. {%- endcomment -%}
+<section class="features" id="features">
+	<div class="section__head">
+		<h2 class="section__title">{{ t.features_title }}</h2>
+	</div>
+	<ul class="features__grid">
+		{%- for f in t.features -%}
+		<li class="feature-card">
+			<span class="feature-card__icon">{% include icon.html name=f.icon %}</span>
+			<h3 class="feature-card__title">{{ f.title }}</h3>
+			<p class="feature-card__body">{{ f.body }}</p>
+		</li>
+		{%- endfor -%}
+	</ul>
+</section>

@@ -1,0 +1,78 @@
+# 한국어(정본) 랜딩 문자열. 원본은 앱 repo docs/store-listing.md 캐논.
+# 새 마케팅 문구를 창작하지 말고 캐논을 현지화한다.
+locale: ko
+og_locale: ko_KR
+dir: ltr
+name: 한국어
+
+nav:
+  features: 기능
+  screens: 화면
+  download: 다운로드
+skip: 본문으로 건너뛰기
+
+hero:
+  headline: Pilmie에서 함께 읽어요          # 캐논 슬로건
+  sub: 독서를 기록하고, 연속일수를 쌓고, 리뷰를 나누는 독서 커뮤니티   # 캐논 한 줄 소개
+  lede: Pilmie는 당신이 읽는 모든 것을 담는 따뜻한 독서 공간이에요.     # Description 훅
+  meta: 무료 · 광고 없음 · iOS 16+ / Android
+  mascot_alt: Pilmie 마스코트
+
+gallery:
+  title: Pilmie 둘러보기
+  shots:
+    - { file: 01-home,          caption: 홈,      alt: "Pilmie 홈 화면 — 오늘의 책, 독서 연속일수, 맞춤 추천" }
+    - { file: 02-shelf,         caption: 서재,    alt: "Pilmie 서재 화면 — 읽고 싶어요·읽는 중·읽음으로 정리한 내 책" }
+    - { file: 03-profile,       caption: 프로필,  alt: "Pilmie 프로필 화면 — 독서 통계와 연속일수 기록" }
+    - { file: 04-review_detail, caption: 리뷰,    alt: "Pilmie 리뷰 화면 — 별점과 함께 남긴 책 리뷰와 댓글" }
+    - { file: 05-book_detail,   caption: 책 상세, alt: "Pilmie 책 상세 화면 — 별점 분포와 다른 독자들의 리뷰" }
+
+# 기능 7블록 — 캐논 순서 고정. 순서를 바꾸지 말 것 (load-bearing).
+features_title: Pilmie에서 할 수 있는 것
+features:
+  - icon: streak
+    title: 이어지는 독서 습관
+    body: 매일 체크인하며 독서 연속일수를 쌓아보세요. 연간 목표를 정하고 완독한 책을 기록할 수 있어요.
+  - icon: shelf
+    title: 나만의 서재
+    body: "모든 책을 '읽고 싶어요 · 읽는 중 · 읽음'으로 정리하고, 읽던 책은 바로 이어서."
+  - icon: review
+    title: 리뷰 쓰고 발견하기
+    body: 별점과 함께 리뷰를 남기고, 다른 독자들의 리뷰를 만나보세요. 최신순·좋아요순으로 정렬할 수 있어요.
+  - icon: highlight
+    title: 마음에 남은 문장 수집
+    body: 좋았던 문장을 하이라이트해 언제든 다시 보고, 예쁜 카드로 공유해요.
+  - icon: discover
+    title: 다음에 읽을 책 발견
+    body: "매일 바뀌는 '오늘의 책', 기분 따라 고르는 테마, 지금 사람들이 읽고 있는 책까지."
+  - icon: social
+    title: 마음 맞는 독자 팔로우
+    body: 취향이 통하는 리뷰어를 팔로우하면 새 리뷰가 홈에 모여요. 좋아요와 댓글로 함께 이야기 나눠요.
+  - icon: year
+    title: 한 해의 독서 돌아보기
+    body: 올해 읽은 책을 공유 카드로 만들어보세요.
+
+reader:
+  title: 모든 독자를 위해
+  items:
+    - 라이트 · 다크 테마
+    - 한국어 · English · 日本語 지원
+    - 무료 — 광고도, 구독도, 인앱 결제도 없어요
+
+cta:
+  headline: 오늘부터 독서 기록을 시작하고, Pilmie에서 함께 읽어요.   # 캐논 마무리 CTA
+
+badges:
+  ios_alt: App Store에서 다운로드
+  android_alt: Google Play에서 다운로드
+
+footer:
+  tagline: 독서를 기록하고, 연속일수를 쌓고, 리뷰를 나누는 독서 커뮤니티
+  legal:
+    - { label: 개인정보처리방침, url: /privacy/ }
+    - { label: 이용약관,         url: /terms/ }
+  contact: 문의
+  social_label: 소셜 미디어
+  copyright: © 2026 Bullets
+
+lang_switch_label: 언어

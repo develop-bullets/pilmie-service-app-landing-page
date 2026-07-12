@@ -1,0 +1,78 @@
+# English landing strings. Source: pilmie app docs/store-listing.md §1-1 canon.
+# Localize the canon; do not invent new marketing copy.
+locale: en
+og_locale: en_US
+dir: ltr
+name: English
+
+nav:
+  features: Features
+  screens: Screens
+  download: Download
+skip: Skip to content
+
+hero:
+  headline: Read together on Pilmie          # canon slogan
+  sub: Log your reading, build streaks, and share reviews with fellow readers.   # canon one-liner
+  lede: Pilmie is a cozy home for everything you read.     # Description hook
+  meta: Free · No ads · iOS 16+ / Android
+  mascot_alt: Pilmie mascot
+
+gallery:
+  title: Take a look
+  shots:
+    - { file: 01-home,          caption: Home,    alt: "Pilmie home screen — today's book, reading streak, and picks for you" }
+    - { file: 02-shelf,         caption: Shelf,   alt: "Pilmie shelf screen — your books sorted into Want to read, Reading, and Read" }
+    - { file: 03-profile,       caption: Profile, alt: "Pilmie profile screen — reading stats and streak history" }
+    - { file: 04-review_detail, caption: Reviews, alt: "Pilmie review screen — a book review with a star rating and comments" }
+    - { file: 05-book_detail,   caption: Book,    alt: "Pilmie book detail screen — rating distribution and reviews from other readers" }
+
+# 7 feature blocks — canon order, locked (load-bearing).
+features_title: Why readers love Pilmie
+features:
+  - icon: streak
+    title: Build a reading habit
+    body: Check in every day and watch your reading streak grow. Set an annual goal and track every book you finish.
+  - icon: shelf
+    title: Your personal library
+    body: Sort every book into Want to read, Reading, and Read, and pick up right where you left off.
+  - icon: review
+    title: Write & discover reviews
+    body: Rate books, write reviews, and browse thoughtful takes from other readers. Sort by latest or most loved.
+  - icon: highlight
+    title: Save the lines that stay with you
+    body: Highlight your favorite sentences, revisit them anytime, and share them as beautiful cards.
+  - icon: discover
+    title: Find your next read
+    body: A fresh "Today's book," mood-based collections, and the books people are reading right now.
+  - icon: social
+    title: Follow readers you trust
+    body: Follow reviewers whose taste you love, and their new reviews gather on your home. Like and comment to keep the conversation going.
+  - icon: year
+    title: Look back on your year
+    body: Turn your year of reading into a shareable card.
+
+reader:
+  title: Made for every reader
+  items:
+    - Light and dark themes
+    - Available in English, 日本語, and 한국어
+    - Free — no ads, no subscription, no in-app purchases
+
+cta:
+  headline: Start your reading log today and read together on Pilmie.   # canon closing CTA
+
+badges:
+  ios_alt: Download on the App Store
+  android_alt: Get it on Google Play
+
+footer:
+  tagline: Log your reading, build streaks, and share reviews with fellow readers.
+  legal:
+    - { label: Privacy Policy,   url: /privacy-en/ }
+    - { label: Terms of Service, url: /terms-en/ }
+  contact: Contact
+  social_label: Social media
+  copyright: © 2026 Bullets
+
+lang_switch_label: Language

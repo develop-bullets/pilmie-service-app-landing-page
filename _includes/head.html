@@ -1,27 +1,37 @@
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	{%- comment -%}
 	seo-tag가 per-page <title>, description, canonical, og:*, twitter:*, WebSite JSON-LD를 생성한다.
-	정책 페이지는 front matter의 title/lang을, 홈은 site.title/description을 쓴다 — 동기화 스크립트 수정 불필요.
+	정책 페이지는 front matter의 title + _config defaults의 lang/image/description을 쓴다
+	→ sync-landing-pages.sh 수정 불필요.
 	{%- endcomment -%}
 	{% seo %}
 
 	{% include hreflang.html %}
+	{% include schema.html %}
 
-	<link rel="icon" href="{{ '/assets/app-icon.png' | relative_url }}">
-	<link rel="apple-touch-icon" href="{{ '/assets/app-icon.png' | relative_url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/brand/favicon-32.png' | relative_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/brand/favicon-16.png' | relative_url }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/brand/apple-touch-icon.png' | relative_url }}">
 
 	<meta name="theme-color" content="#F4AA2B" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#1C1C1C" media="(prefers-color-scheme: dark)">
 
-	<!-- Smart App Banner -->
-	{% if site.enable_smart_app_banner %}
-		<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
-	{% endif %}
+	{%- if site.enable_smart_app_banner %}
+	<meta name="apple-itunes-app" content="app-id={{ site.app.ios_id }}">
+	{%- endif %}
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
+	{%- comment -%} 홈 히어로의 첫 스크린샷 preload (LCP). {%- endcomment -%}
+	{%- if page.layout == 'home' -%}
+		{%- assign first = site.data.i18n[page.lang].gallery.shots[0] -%}
+		{%- assign shot = '/assets/shots/' | append: page.lang | append: '/' | append: first.file -%}
+	<link rel="preload" as="image" fetchpriority="high"
+		href="{{ shot | append: '-440.webp' | relative_url }}"
+		imagesrcset="{{ shot | append: '-440.webp' | relative_url }} 440w, {{ shot | append: '-880.webp' | relative_url }} 880w"
+		imagesizes="(max-width: 640px) 70vw, 300px">
+	{%- endif %}
+
+	<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>

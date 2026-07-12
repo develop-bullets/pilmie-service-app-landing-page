@@ -1,0 +1,40 @@
+// 리더 스트립 — 라이트/다크, 3언어, 무료.
+.reader {
+	padding: 0 0 var(--s-section);
+	background: var(--bg);
+}
+
+.reader__inner {
+	max-width: var(--content);
+	margin-inline: auto;
+	padding: var(--s-3xl) var(--s-2xl);
+	border: 1px solid var(--divider);
+	border-radius: var(--r-xl);
+	background: var(--surface);
+	text-align: center;
+
+	// 컨테이너 패딩과 카드 패딩이 겹치지 않게
+	margin-inline: max(var(--s-2xl), calc(50vw - var(--content) / 2));
+}
+
+.reader__title {
+	font-size: clamp(20px, 2.6vw, 26px);
+	margin-bottom: var(--s-xl);
+}
+
+.reader__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s-md);
+	justify-content: center;
+}
+
+.reader__item {
+	padding: var(--s-sm) var(--s-lg);
+	border-radius: var(--r-pill);
+	background: var(--bg);
+	border: 1px solid var(--divider);
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-secondary);
+}

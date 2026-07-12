@@ -1,0 +1,49 @@
+// 스크린샷 갤러리 — CSS scroll-snap. JS 0줄.
+.gallery {
+	padding: var(--s-section) 0;
+	background: var(--surface);
+}
+
+.gallery__strip {
+	display: flex;
+	gap: var(--s-2xl);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scroll-padding-inline: var(--s-2xl);
+	padding: var(--s-sm) var(--s-2xl) var(--s-2xl);
+	// 넓은 화면에선 가운데 정렬(스크롤 불필요)
+	justify-content: flex-start;
+
+	@media (min-width: 1200px) { justify-content: center; }
+
+	scrollbar-width: thin;
+	&::-webkit-scrollbar { height: 8px; }
+	&::-webkit-scrollbar-thumb {
+		background: var(--divider-strong);
+		border-radius: var(--r-pill);
+	}
+}
+
+.gallery__item {
+	flex: 0 0 auto;
+	scroll-snap-align: center;
+
+	figure { margin: 0; }
+}
+
+.gallery__img {
+	width: clamp(190px, 62vw, 240px);
+	height: auto;
+	border-radius: 18px;
+	box-shadow: var(--shadow-md);
+	background: var(--bg);
+}
+
+.gallery__caption {
+	margin-top: var(--s-md);
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-secondary);
+}

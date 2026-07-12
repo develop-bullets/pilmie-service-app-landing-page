@@ -1,21 +1,15 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+layout: base
+body_class: page
 ---
+{%- comment -%}
+정책 페이지 전용. _pages/*.md는 앱 repo의 docs/legal/sync-landing-pages.sh가 생성하며,
+front matter로 layout/title/include_in_header만 넘긴다 — 이 레이아웃은 그 3개 외에
+아무것도 요구하지 않는다(계약).
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
-
-{% include head.html %}
-
-<body class="subPageBody">
-    <div class="headerBackground subPageHeaderBackground">
-        <div class="container subPageContainer">
-        {% include header.html %}
-            <article class="page markdown-body">
-                {{ content }}
-            </article>
-        </div>
-    </div>
-</body>
-
-</html>
+문서 본문이 자체 H1(`# Pilmie 개인정보처리방침`)을 갖고 있으므로 page.title을
+H1로 렌더하지 않는다(중복 H1 방지). page.title은 <title>에만 쓰인다.
+{%- endcomment -%}
+<article class="prose">
+	{{ content }}
+</article>

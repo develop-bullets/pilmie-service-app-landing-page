@@ -1,0 +1,68 @@
+// 기능 7블록. 캐논 순서.
+.features {
+	padding: var(--s-section) 0;
+	background: var(--bg);
+}
+
+.features__grid {
+	max-width: var(--content);
+	margin-inline: auto;
+	padding-inline: var(--s-2xl);
+	display: grid;
+	gap: var(--s-xl);
+	grid-template-columns: 1fr;
+
+	@media (min-width: 680px)  { grid-template-columns: repeat(2, 1fr); }
+	@media (min-width: 1000px) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.feature-card {
+	padding: var(--s-2xl);
+	border: 1px solid var(--divider);
+	border-radius: var(--r-xl);
+	background: var(--surface);
+	transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-md);
+		border-color: var(--divider-strong);
+	}
+
+	// 7개 = 3열에서 마지막 1개가 홀로 남는다 → 마지막 카드를 가운데로.
+	@media (min-width: 1000px) {
+		&:last-child { grid-column: 2; }
+	}
+	// 2열에선 7번째가 홀로 남으므로 전체 폭으로.
+	@media (min-width: 680px) and (max-width: 999px) {
+		&:last-child { grid-column: 1 / -1; }
+	}
+}
+
+.feature-card__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: var(--r-md);
+	// 브랜드 그라데이션의 옅은 틴트 + 앰버 아이콘
+	background: color-mix(in srgb, var(--accent) 16%, transparent);
+	color: var(--accent);
+	margin-bottom: var(--s-lg);
+}
+
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+	.feature-card__icon { background: rgba(244, 170, 43, .16); }
+}
+
+.feature-card__title {
+	font-size: 18px;
+	margin-bottom: var(--s-sm);
+}
+
+.feature-card__body {
+	font-size: 15px;
+	color: var(--text-muted);
+	line-height: 1.7;
+}

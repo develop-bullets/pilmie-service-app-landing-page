@@ -1,0 +1,23 @@
+{%- comment -%} 홈에만 SoftwareApplication JSON-LD. aggregateRating은 넣지 않음(평점 데이터 없음). {%- endcomment -%}
+{%- if page.layout == 'home' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pilmie",
+  "applicationCategory": "BookApplication",
+  "operatingSystem": "iOS {{ site.app.ios_min }}+, Android",
+  "inLanguage": ["ko", "en", "ja"],
+  "url": {{ page.url | absolute_url | jsonify }},
+  "image": {{ page.image | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+  "installUrl": [
+    {{ site.app.ios_url | jsonify }},
+    {{ site.app.android_url | jsonify }}
+  ],
+  "author": { "@type": "Organization", "name": "{{ site.company.name }}", "email": "{{ site.company.email }}" },
+  "publisher": { "@type": "Organization", "name": "{{ site.company.name }}" }
+}
+</script>
+{%- endif -%}

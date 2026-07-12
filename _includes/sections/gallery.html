@@ -1,0 +1,22 @@
+{%- comment -%} 스크린샷 갤러리. CSS scroll-snap, JS 0줄. 키보드 스크롤 가능. {%- endcomment -%}
+<section class="gallery" id="screens">
+	<div class="section__head">
+		<h2 class="section__title">{{ t.gallery.title }}</h2>
+	</div>
+	<ul class="gallery__strip" tabindex="0" role="region" aria-label="{{ t.gallery.title }}">
+		{%- for s in t.gallery.shots -%}
+		{%- assign base = '/assets/shots/' | append: page.lang | append: '/' | append: s.file -%}
+		<li class="gallery__item">
+			<figure>
+				<img class="gallery__img"
+					src="{{ base | append: '-440.webp' | relative_url }}"
+					srcset="{{ base | append: '-440.webp' | relative_url }} 440w, {{ base | append: '-880.webp' | relative_url }} 880w"
+					sizes="(max-width: 640px) 62vw, 240px"
+					width="240" height="521" alt="{{ s.alt }}"
+					loading="lazy" decoding="async">
+				<figcaption class="gallery__caption">{{ s.caption }}</figcaption>
+			</figure>
+		</li>
+		{%- endfor -%}
+	</ul>
+</section>

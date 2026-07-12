@@ -1,0 +1,87 @@
+.hero {
+	background: var(--brand-gradient);
+	color: var(--on-brand);
+	padding: clamp(48px, 7vw, 88px) 0 0;
+	overflow: hidden;
+}
+
+.hero__inner {
+	max-width: var(--content);
+	margin-inline: auto;
+	padding-inline: var(--s-2xl);
+	display: grid;
+	gap: var(--s-3xl);
+	align-items: center;
+
+	@media (min-width: 900px) {
+		grid-template-columns: 1.05fr .95fr;
+		gap: var(--s-4xl);
+	}
+}
+
+.hero__copy {
+	padding-bottom: clamp(40px, 6vw, 72px);
+	// 그라데이션 위 모든 텍스트는 다크 잉크 (WCAG AA)
+	> * + * { margin-top: var(--s-lg); }
+}
+
+.hero__headline {
+	color: var(--on-brand);
+	font-size: clamp(30px, 5.4vw, 52px);
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	line-height: 1.18;
+}
+
+.hero__sub {
+	font-size: clamp(16px, 2.1vw, 20px);
+	font-weight: 600;
+	color: var(--on-brand);
+	max-width: 30ch;
+}
+
+.hero__lede {
+	font-size: 16px;
+	color: var(--on-brand-muted);
+	max-width: 38ch;
+}
+
+.hero__meta {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--on-brand-muted);
+}
+
+// 히어로 안의 스토어 배지는 여백을 조금 더
+.hero__copy .store-badges { margin-top: var(--s-2xl); }
+
+// --- 아트(마스코트 + 첫 스크린샷) --------------------------------------------
+.hero__art {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	min-height: 0;
+}
+
+.hero__shot {
+	width: clamp(200px, 52vw, 300px);
+	height: auto;
+	border-radius: 22px;
+	box-shadow: var(--shadow-lg);
+	position: relative;
+	z-index: 1;
+}
+
+.hero__mascot {
+	position: absolute;
+	left: 0;
+	bottom: 8%;
+	width: clamp(96px, 22vw, 150px);
+	height: auto;
+	z-index: 2;
+	filter: drop-shadow(0 12px 28px rgba(0, 0, 0, .22));
+	pointer-events: none;
+
+	@media (min-width: 900px) { left: -8px; }
+}

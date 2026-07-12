@@ -1,0 +1,14 @@
+---
+# front matter가 있어야 Jekyll이 SCSS로 컴파일한다. → /assets/css/main.css
+---
+
+@import "tokens";
+@import "base";
+@import "header";
+@import "hero";
+@import "gallery";
+@import "features";
+@import "reader";
+@import "cta";
+@import "footer";
+@import "prose";

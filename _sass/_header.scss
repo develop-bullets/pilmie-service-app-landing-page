@@ -1,0 +1,57 @@
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: color-mix(in srgb, var(--bg) 82%, transparent);
+	backdrop-filter: saturate(180%) blur(14px);
+	-webkit-backdrop-filter: saturate(180%) blur(14px);
+	border-bottom: 1px solid var(--divider);
+}
+
+// color-mix 미지원 브라우저 폴백
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+	.site-header { background: var(--bg); }
+}
+
+.site-header__inner {
+	max-width: var(--content);
+	margin-inline: auto;
+	padding: var(--s-md) var(--s-2xl);
+	display: flex;
+	align-items: center;
+	gap: var(--s-lg);
+}
+
+.site-nav {
+	display: none;
+	gap: var(--s-sm);
+	margin-inline: auto;
+
+	a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 40px;
+		padding: 0 var(--s-md);
+		border-radius: var(--r-pill);
+		font-size: 15px;
+		font-weight: 500;
+		color: var(--text-secondary);
+
+		&:hover { color: var(--text-primary); background: var(--surface-variant); }
+	}
+
+	@media (min-width: 860px) { display: flex; }
+}
+
+.site-header__actions {
+	display: flex;
+	align-items: center;
+	gap: var(--s-sm);
+	margin-left: auto;
+}
+
+// 좁은 화면에선 언어 전환기만 남기고 CTA는 숨김(히어로에 배지가 있음)
+.site-header__cta {
+	display: none;
+	@media (min-width: 640px) { display: inline-flex; }
+}

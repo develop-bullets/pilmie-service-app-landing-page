@@ -1,0 +1,107 @@
+// 정책 페이지(개인정보처리방침·이용약관) 본문.
+// 980줄짜리 github-markdown.scss 대체. 같은 토큰을 상속하므로 라이트/다크 자동.
+.prose {
+	max-width: 760px;
+	margin-inline: auto;
+	padding: var(--s-4xl) var(--s-2xl) var(--s-section);
+	color: var(--text-body);
+	font-size: 16px;
+	line-height: 1.8;
+
+	> * + * { margin-top: var(--s-lg); }
+
+	h1 {
+		font-size: clamp(26px, 4vw, 34px);
+		margin-top: 0;
+		padding-bottom: var(--s-lg);
+		border-bottom: 1px solid var(--divider);
+	}
+
+	h2 {
+		font-size: clamp(20px, 2.8vw, 24px);
+		margin-top: var(--s-4xl);
+	}
+
+	h3 {
+		font-size: 18px;
+		margin-top: var(--s-3xl);
+	}
+
+	h4 { font-size: 16px; margin-top: var(--s-2xl); }
+
+	a {
+		color: var(--accent);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		&:hover { text-decoration-thickness: 2px; }
+	}
+
+	strong { color: var(--text-primary); font-weight: 700; }
+
+	ul, ol {
+		padding-left: 1.4em;
+		list-style: revert;
+		> li + li { margin-top: var(--s-sm); }
+	}
+
+	li::marker { color: var(--text-hint); }
+
+	hr {
+		border: 0;
+		border-top: 1px solid var(--divider);
+		margin: var(--s-3xl) 0;
+	}
+
+	code {
+		padding: 2px 6px;
+		border-radius: var(--r-sm);
+		background: var(--surface-variant);
+		font-size: .9em;
+	}
+
+	blockquote {
+		margin-inline: 0;
+		padding-left: var(--s-lg);
+		border-left: 3px solid var(--divider-strong);
+		color: var(--text-muted);
+	}
+
+	// --- 표 (개인정보처리방침의 위탁표 등 25행) ---------------------------
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 14px;
+		line-height: 1.6;
+	}
+
+	th, td {
+		border: 1px solid var(--divider);
+		padding: var(--s-md);
+		text-align: left;
+		vertical-align: top;
+	}
+
+	th {
+		background: var(--surface-variant);
+		color: var(--text-primary);
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	// 모바일에선 표를 가로 스크롤 (셀 줄바꿈은 유지)
+	@media (max-width: 720px) {
+		table {
+			display: block;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+
+	// sync-landing-pages.sh가 본문 첫 요소로 넣는 언어 전환 줄 —
+	// 본문 문단이 아니라 보조 라인으로 보이게.
+	> p:first-of-type {
+		font-size: 14px;
+		color: var(--text-muted);
+		a { color: var(--text-secondary); font-weight: 600; }
+	}
+}

@@ -1,0 +1,9 @@
+{%- comment -%} 스토어 배지. URL 하드코딩(런타임 조회 없음). t는 레이아웃에서 assign. {%- endcomment -%}
+<div class="store-badges">
+	<a class="store-badge" href="{{ site.app.ios_url }}" aria-label="{{ t.badges.ios_alt }}">
+		<img src="{{ '/assets/appstore.png' | relative_url }}" alt="{{ t.badges.ios_alt }}" width="132" height="44" loading="lazy" decoding="async">
+	</a>
+	<a class="store-badge" href="{{ site.app.android_url }}" aria-label="{{ t.badges.android_alt }}">
+		<img src="{{ '/assets/playstore.png' | relative_url }}" alt="{{ t.badges.android_alt }}" width="148" height="44" loading="lazy" decoding="async">
+	</a>
+</div>

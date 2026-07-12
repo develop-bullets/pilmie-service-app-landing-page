@@ -1,0 +1,11 @@
+{%- comment -%} 리더 스트립 — 모든 독자를 위해. {%- endcomment -%}
+<section class="reader">
+	<div class="reader__inner">
+		<h2 class="reader__title">{{ t.reader.title }}</h2>
+		<ul class="reader__list">
+			{%- for item in t.reader.items -%}
+			<li class="reader__item">{{ item }}</li>
+			{%- endfor -%}
+		</ul>
+	</div>
+</section>

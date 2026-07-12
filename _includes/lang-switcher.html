@@ -1,0 +1,20 @@
+{%- comment -%}
+언어 전환기. hreflang.html에서 assign된 alt_group을 재사용한다
+(base.html이 hreflang → lang-switcher 순으로 include). 정책 페이지에서도
+같은 그룹으로 정확히 연결된다. include.class로 위치별 클래스 부여.
+{%- endcomment -%}
+{%- if alt_group -%}
+<nav class="lang-switcher {{ include.class }}" aria-label="{{ t.lang_switch_label }}">
+	{%- for loc in site.data.i18n -%}
+		{%- assign code = loc[0] -%}
+		{%- assign href = alt_group[code] -%}
+		{%- if href -%}
+			{%- if code == page.lang -%}
+				<span class="lang-switcher__item is-current" aria-current="true" lang="{{ code }}">{{ loc[1].name }}</span>
+			{%- else -%}
+				<a class="lang-switcher__item" href="{{ href | relative_url }}" lang="{{ code }}" hreflang="{{ code }}">{{ loc[1].name }}</a>
+			{%- endif -%}
+		{%- endif -%}
+	{%- endfor -%}
+</nav>
+{%- endif -%}

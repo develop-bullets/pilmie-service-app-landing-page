@@ -1,0 +1,23 @@
+---
+# base — 모든 페이지의 공통 셸. t / alt_group / home_url을 여기서 assign하면
+# 이후 모든 include가 상속한다.
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign home_url = site.data.alternates[0][page.lang] | default: '/' -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+
+{% include head.html %}
+
+<body class="{{ page.body_class }}">
+	<a class="skip-link" href="#main">{{ t.skip }}</a>
+
+	{% include site-header.html anchors=page.header_anchors %}
+
+	<main id="main">
+		{{ content }}
+	</main>
+
+	{% include site-footer.html %}
+</body>
+</html>
