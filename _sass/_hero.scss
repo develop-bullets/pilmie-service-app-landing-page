@@ -37,13 +37,16 @@
 	font-size: clamp(16px, 2.1vw, 20px);
 	font-weight: 600;
 	color: var(--on-brand);
-	max-width: 30ch;
+	max-width: 32ch;
+	text-wrap: balance;
 }
 
 .hero__lede {
 	font-size: 16px;
 	color: var(--on-brand-muted);
-	max-width: 38ch;
+	max-width: 42ch;
+	// 마지막 줄에 한 글자만 남는 고아(orphan) 방지. 미지원 브라우저는 무시.
+	text-wrap: pretty;
 }
 
 .hero__meta {

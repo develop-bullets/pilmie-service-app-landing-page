@@ -19,9 +19,17 @@ h1, h2, h3, h4 {
 	line-height: 1.25;
 	letter-spacing: -0.01em;
 	font-weight: 700;
-	// 한국어/일본어 줄바꿈 품질
-	word-break: keep-all;
-	overflow-wrap: anywhere;
+	overflow-wrap: break-word;
+	text-wrap: balance;
+}
+
+// 줄바꿈 품질은 언어마다 규칙이 다르다.
+// - 한국어: 어절 중간에서 끊기면 가독성이 크게 나빠진다 → keep-all.
+// - 일본어: 브라우저의 금칙처리(kinsoku)가 이미 올바르게 동작한다. keep-all을 주면
+//   가나 사이를 끊지 못해 넘치고, overflow-wrap이 개입해 「読みまし/ょう」처럼
+//   작은 가나가 행두에 오는 잘못된 줄바꿈이 발생한다 → 기본값을 그대로 둔다.
+html[lang="ko"] {
+	h1, h2, h3, h4, p, li { word-break: keep-all; }
 }
 
 p { margin: 0; }
@@ -131,18 +139,27 @@ a { color: inherit; text-decoration: none; }
 .store-badges {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--s-md);
+	gap: var(--s-sm);
 	align-items: center;
 }
 
 .store-badge {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	border-radius: 8px;
 	transition: transform .15s ease;
 
-	img { height: 44px; width: auto; }
 	&:hover { transform: translateY(-2px); }
+
+	img { width: auto; }
 }
+
+// Apple 배지는 여백이 없다 → 44px가 곧 버튼 높이.
+.store-badge--ios img { height: 44px; }
+
+// Google Play 배지 PNG는 여백이 내장돼 세로 콘텐츠 비율이 0.768.
+// 44 / 0.768 ≈ 57px 로 렌더해야 Apple 배지와 시각적 높이가 맞는다.
+.store-badge--android img { height: 57px; }
 
 // --- 언어 전환기 ------------------------------------------------------------
 .lang-switcher {

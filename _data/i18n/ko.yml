@@ -65,6 +65,7 @@ cta:
 badges:
   ios_alt: App Store에서 다운로드
   android_alt: Google Play에서 다운로드
+  ios_w: 143              # Apple SVG viewBox 129.7×40 → 44px 높이일 때의 폭
 
 footer:
   tagline: 독서를 기록하고, 연속일수를 쌓고, 리뷰를 나누는 독서 커뮤니티

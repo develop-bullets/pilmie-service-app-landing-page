@@ -65,6 +65,7 @@ cta:
 badges:
   ios_alt: App Store でダウンロード
   android_alt: Google Play で手に入れよう
+  ios_w: 120              # Apple SVG viewBox 108.9×40 → 44px 高さのときの幅
 
 footer:
   tagline: 読書を記録して連続日数を伸ばし、本のレビューを読書仲間とシェア。

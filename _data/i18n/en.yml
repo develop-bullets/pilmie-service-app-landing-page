@@ -65,6 +65,7 @@ cta:
 badges:
   ios_alt: Download on the App Store
   android_alt: Get it on Google Play
+  ios_w: 132              # Apple SVG viewBox 119.7×40 → width at 44px height
 
 footer:
   tagline: Log your reading, build streaks, and share reviews with fellow readers.
