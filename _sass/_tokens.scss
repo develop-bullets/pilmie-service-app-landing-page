@@ -6,14 +6,17 @@
 	color-scheme: light dark;
 
 	// 브랜드 — 라이트/다크 공통 (app_colors.dart)
-	--accent: #F4AA2B;          // accent (앰버)
+	// accent는 2026-07-12 앰버 #F4AA2B → 로즈 #E8557F로 변경(앱 커밋 6faa384).
+	// 구 앰버가 자매 앱 Cineepp의 앰버(#FFB300)와 색조가 거의 같아(hue 38 vs 42)
+	// 랜딩·스토어에서 두 앱이 한 색으로 읽혔다. 마스코트 핑크를 더 붉게 민 색(hue 343).
+	--accent: #E8557F;          // accent (로즈)
 	--accent-2: #F48FC2;        // 마스코트 핑크
 	--star: #FFC107;
 	--error: #F44336;
-	// 시그니처 그라데이션 — tool/feature_graphic.py의 _gradient_diag와 동일(135°)
-	--brand-gradient: linear-gradient(135deg, #F4AA2B 0%, #F48FC2 100%);
-	// 그라데이션 위 텍스트: 다크 잉크. 흰색은 WCAG AA 미달(앰버 위 1.9:1),
-	// 다크 잉크는 앰버 8.9:1 / 핑크 7.6:1로 통과.
+	// 시그니처 그라데이션 — tool/og_image.py · 앱 tool/feature_graphic.py와 동일(135°)
+	--brand-gradient: linear-gradient(135deg, #E8557F 0%, #F48FC2 100%);
+	// 그라데이션 위 텍스트: 다크 잉크. 흰색은 WCAG AA 미달(로즈 3.48:1 · 핑크 2.20:1),
+	// 다크 잉크는 로즈 5.00:1 / 핑크 7.92:1로 통과(최악 5.00:1).
 	--on-brand: #1A1A1A;
 	--on-brand-muted: rgba(26, 26, 26, 0.72);
 
