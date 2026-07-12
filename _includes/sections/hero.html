@@ -1,0 +1,23 @@
+{%- comment -%} 히어로. 브랜드 그라데이션 + 다크 잉크. 첫 스크린샷은 eager+preload. {%- endcomment -%}
+<section class="hero">
+	<div class="hero__inner">
+		<div class="hero__copy">
+			<h1 class="hero__headline">{{ t.hero.headline }}</h1>
+			<p class="hero__sub">{{ t.hero.sub }}</p>
+			<p class="hero__lede">{{ t.hero.lede }}</p>
+			{% include store-badges.html %}
+			<p class="hero__meta">{{ t.hero.meta }}</p>
+		</div>
+		<div class="hero__art">
+			<img class="hero__mascot" src="{{ '/assets/brand/mascot-480.webp' | relative_url }}" alt="{{ t.hero.mascot_alt }}" width="240" height="333" decoding="async">
+			{%- assign first = t.gallery.shots[0] -%}
+			<img class="hero__shot"
+				src="{{ '/assets/shots/' | append: page.lang | append: '/' | append: first.file | append: '-440.webp' | relative_url }}"
+				srcset="{{ '/assets/shots/' | append: page.lang | append: '/' | append: first.file | append: '-440.webp' | relative_url }} 440w,
+				        {{ '/assets/shots/' | append: page.lang | append: '/' | append: first.file | append: '-880.webp' | relative_url }} 880w"
+				sizes="(max-width: 640px) 70vw, 300px"
+				width="300" height="652" alt="{{ first.alt }}"
+				fetchpriority="high" decoding="async">
+		</div>
+	</div>
+</section>

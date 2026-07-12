@@ -1,0 +1,8 @@
+---
+# front matter를 두면 Liquid이 실행돼 site.url이 치환된다.
+# 직접 작성하면 jekyll-sitemap의 자동 robots.txt 생성을 덮어써 결정론적이 된다.
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml

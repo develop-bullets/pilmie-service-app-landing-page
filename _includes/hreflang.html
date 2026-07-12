@@ -1,0 +1,17 @@
+{%- comment -%}
+현재 page.url이 속한 로케일 그룹을 찾아 alt_group으로 노출하고,
+ko/en/ja + x-default(→ko 루트) hreflang 링크를 뿌린다.
+alt_group은 이 include 이후 lang-switcher.html이 재사용한다.
+{%- endcomment -%}
+{%- assign alt_group = nil -%}
+{%- for g in site.data.alternates -%}
+  {%- if g.ko == page.url or g.en == page.url or g.ja == page.url -%}
+    {%- assign alt_group = g -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if alt_group -%}
+<link rel="alternate" hreflang="ko" href="{{ alt_group.ko | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ alt_group.en | absolute_url }}">
+<link rel="alternate" hreflang="ja" href="{{ alt_group.ja | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ alt_group.ko | absolute_url }}">
+{%- endif -%}

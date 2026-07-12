@@ -1,0 +1,19 @@
+{%- comment -%}
+스토어 배지 — Apple/Google 공식 로케일별 아트워크. URL 하드코딩(런타임 조회 없음).
+
+높이 보정: Google Play 배지 PNG는 여백(clear space)이 내장돼 세로 콘텐츠 비율이
+0.768이다. Apple 배지(44px)와 시각적 높이를 맞추려면 57px로 렌더해야 한다.
+CSS(_base.scss .store-badge)에서 처리.
+
+Apple SVG는 언어마다 폭이 다르다(ko 129.7 · en 119.7 · ja 108.9 @h40) → t.badges.ios_w.
+{%- endcomment -%}
+<div class="store-badges">
+	<a class="store-badge store-badge--ios" href="{{ site.app.ios_url }}">
+		<img src="{{ '/assets/badges/appstore-' | append: page.lang | append: '.svg' | relative_url }}"
+			alt="{{ t.badges.ios_alt }}" width="{{ t.badges.ios_w }}" height="44" loading="lazy" decoding="async">
+	</a>
+	<a class="store-badge store-badge--android" href="{{ site.app.android_url }}">
+		<img src="{{ '/assets/badges/playstore-' | append: page.lang | append: '.png' | relative_url }}"
+			alt="{{ t.badges.android_alt }}" width="147" height="57" loading="lazy" decoding="async">
+	</a>
+</div>

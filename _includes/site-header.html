@@ -1,0 +1,25 @@
+{%- comment -%}
+사이트 헤더. home_url/t/alt_group은 base.html에서 assign.
+include.anchors=true 일 때만 홈 섹션 앵커 내비 노출(정책 페이지에선 숨김).
+{%- endcomment -%}
+<header class="site-header">
+	<div class="site-header__inner">
+		<a class="brand" href="{{ home_url | relative_url }}">
+			<img class="brand__logo" src="{{ '/assets/brand/logo.png' | relative_url }}" alt="" width="32" height="32">
+			<span class="brand__name">Pilmie</span>
+		</a>
+
+		{%- if include.anchors -%}
+		<nav class="site-nav" aria-label="{{ t.nav.features }}">
+			<a href="#features">{{ t.nav.features }}</a>
+			<a href="#screens">{{ t.nav.screens }}</a>
+			<a href="#download">{{ t.nav.download }}</a>
+		</nav>
+		{%- endif -%}
+
+		<div class="site-header__actions">
+			{% include lang-switcher.html class="lang-switcher--header" %}
+			<a class="btn btn--sm btn--dark site-header__cta" href="{{ home_url | relative_url }}#download">{{ t.nav.download }}</a>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,11 @@
+# 각 로케일 그룹의 URL 매핑. hreflang 링크와 언어 전환기를 동시에 구동한다.
+# 홈: 루트=ko. 정책 페이지: 루트=ko(정본), -en/-ja 접미사=번역 (sync-landing-pages.sh 규약).
+- ko: /
+  en: /en/
+  ja: /ja/
+- ko: /privacy/
+  en: /privacy-en/
+  ja: /privacy-ja/
+- ko: /terms/
+  en: /terms-en/
+  ja: /terms-ja/

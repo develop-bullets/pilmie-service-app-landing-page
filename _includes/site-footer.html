@@ -1,0 +1,31 @@
+{%- comment -%} 사이트 푸터. t/alt_group/home_url은 base.html에서 assign. {%- endcomment -%}
+<footer class="site-footer">
+	<div class="site-footer__inner">
+		<div class="site-footer__brand">
+			<a class="brand" href="{{ home_url | relative_url }}">
+				<img class="brand__logo" src="{{ '/assets/brand/logo.png' | relative_url }}" alt="" width="28" height="28">
+				<span class="brand__name">Pilmie</span>
+			</a>
+			<p class="site-footer__tagline">{{ t.footer.tagline }}</p>
+		</div>
+
+		<nav class="site-footer__social" aria-label="{{ t.footer.social_label }}">
+			<a href="https://instagram.com/pilmie.official" aria-label="Instagram">{% include icon.html name="instagram" %}</a>
+			<a href="https://x.com/pilmieofficial" aria-label="X">{% include icon.html name="x" %}</a>
+			<a href="https://youtube.com/@pilmie.official" aria-label="YouTube">{% include icon.html name="youtube" %}</a>
+			<a href="mailto:{{ site.company.email }}" aria-label="{{ t.footer.contact }}">{% include icon.html name="mail" %}</a>
+		</nav>
+
+		<nav class="site-footer__legal" aria-label="{{ t.footer.contact }}">
+			{%- for l in t.footer.legal -%}
+				<a href="{{ l.url | relative_url }}">{{ l.label }}</a>
+			{%- endfor -%}
+			<a href="mailto:{{ site.company.email }}">{{ t.footer.contact }}</a>
+		</nav>
+
+		<div class="site-footer__bottom">
+			{% include lang-switcher.html class="lang-switcher--footer" %}
+			<p class="site-footer__copy">{{ t.footer.copyright }}</p>
+		</div>
+	</div>
+</footer>

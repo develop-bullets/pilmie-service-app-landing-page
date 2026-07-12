@@ -1,0 +1,16 @@
+---
+layout: base
+body_class: home
+header_anchors: true
+---
+{%- comment -%}
+t는 여기서도 assign해야 한다. Jekyll은 자식 레이아웃(home)의 content를 먼저 렌더한 뒤
+부모(base)에 {{ content }}로 넘기므로, base.html의 assign은 아래 include들에 닿지 않는다.
+{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+
+{% include sections/hero.html %}
+{% include sections/gallery.html %}
+{% include sections/features.html %}
+{% include sections/reader.html %}
+{% include sections/cta.html %}
