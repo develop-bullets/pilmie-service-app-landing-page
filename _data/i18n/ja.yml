@@ -15,7 +15,7 @@ hero:
   headline: Pilmieで一緒に読みましょう          # キャノン・スローガン
   sub: 読書を記録して連続日数を伸ばし、本のレビューを読書仲間とシェア。   # キャノン一行紹介
   lede: Pilmie（ピルミー）は、あなたの「読む」をまるごと記録できる読書アプリです。     # Description フック
-  meta: 無料 · 広告なし · iOS 16+ / Android
+  meta: iOS 16+ / Android
   mascot_alt: Pilmie マスコット
 
 gallery:
@@ -57,7 +57,6 @@ reader:
   items:
     - ライト／ダークテーマ
     - 日本語・English・한국어に対応
-    - 無料 — 広告も、サブスクも、アプリ内課金もありません
 
 cta:
   headline: 今日から読書記録を始めて、Pilmieで一緒に読みましょう。   # キャノン締めCTA

@@ -15,7 +15,7 @@ hero:
   headline: Pilmie에서 함께 읽어요          # 캐논 슬로건
   sub: 독서를 기록하고, 연속일수를 쌓고, 리뷰를 나누는 독서 커뮤니티   # 캐논 한 줄 소개
   lede: Pilmie는 당신이 읽는 모든 것을 담는 따뜻한 독서 공간이에요.     # Description 훅
-  meta: 무료 · 광고 없음 · iOS 16+ / Android
+  meta: iOS 16+ / Android
   mascot_alt: Pilmie 마스코트
 
 gallery:
@@ -57,7 +57,6 @@ reader:
   items:
     - 라이트 · 다크 테마
     - 한국어 · English · 日本語 지원
-    - 무료 — 광고도, 구독도, 인앱 결제도 없어요
 
 cta:
   headline: 오늘부터 독서 기록을 시작하고, Pilmie에서 함께 읽어요.   # 캐논 마무리 CTA
