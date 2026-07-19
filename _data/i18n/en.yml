@@ -14,7 +14,7 @@ skip: Skip to content
 hero:
   headline: Read together on Pilmie          # canon slogan
   sub: Log your reading, build streaks, and share reviews with fellow readers.   # canon one-liner
-  lede: Pilmie is a cozy home for everything you read.     # Description hook
+  lede: Keep the urge to read — and finally finish what you start. Pilmie is the reading app where you log the books you read, sink into distraction-free reading, and share the lines and reviews that stay with you.     # Description hook
   # State only "Free" (a fact at download). Do NOT promise "no ads / no subscription /
   # no in-app purchases" — that forecloses future monetization.
   meta: Free · iOS 16+ / Android
@@ -25,25 +25,30 @@ gallery:
   shots:
     - { file: 01-home,          caption: Home,    alt: "Pilmie home screen — today's book, reading streak, and picks for you" }
     - { file: 02-shelf,         caption: Shelf,   alt: "Pilmie shelf screen — your books sorted into Want to read, Reading, and Read" }
-    - { file: 03-profile,       caption: Profile, alt: "Pilmie profile screen — reading stats and streak history" }
-    - { file: 04-review_detail, caption: Reviews, alt: "Pilmie review screen — a book review with a star rating and comments" }
-    - { file: 05-book_detail,   caption: Book,    alt: "Pilmie book detail screen — rating distribution and reviews from other readers" }
+    - { file: 03-focus,         caption: Focus,   alt: "Pilmie focus reading screen — an immersion timer and calm ambient music for distraction-free reading" }
+    - { file: 04-book_detail,   caption: Book,    alt: "Pilmie book detail screen — rating distribution and reviews from other readers" }
+    - { file: 05-review_detail, caption: Reviews, alt: "Pilmie review screen — a book review with a star rating and comments" }
+    - { file: 06-profile,       caption: Profile, alt: "Pilmie profile screen — reading stats and streak history" }
 
-# 7 feature blocks — canon order, locked (load-bearing).
+# 8 feature blocks — canon order, locked (load-bearing).
+# Focus reading (the differentiator) is moved to 2nd per store-listing.md canon.
 features_title: Why readers love Pilmie
 features:
   - icon: streak
-    title: Build a reading habit
-    body: Check in every day and watch your reading streak grow. Set an annual goal and track every book you finish.
+    title: A reading habit that keeps going
+    body: Check in once a day to grow your streak, set a yearly goal, and finish books one by one. Ten focused minutes counts as your check-in for the day.
+  - icon: focus
+    title: Focus reading, fully immersive
+    body: Pick a book, start the timer, and stay in the page with calm ambient music. Reorder your playlist or shuffle it, and watch your focused time add up, session by session.
   - icon: shelf
     title: Your personal library
-    body: Sort every book into Want to read, Reading, and Read, and pick up right where you left off.
-  - icon: review
-    title: Write & discover reviews
-    body: Rate books, write reviews, and browse thoughtful takes from other readers. Sort by latest or most loved.
+    body: Sort every book into Want to read, Reading, and Read, and track how far you've gone by page or percent. Revisit everything you've finished in a month-by-month reading journal.
   - icon: highlight
     title: Save the lines that stay with you
     body: Highlight your favorite sentences, revisit them anytime, and share them as beautiful cards.
+  - icon: review
+    title: Ratings and reviews
+    body: Give each book a star rating and write an honest review. Browse other readers' reviews by latest or most loved.
   - icon: discover
     title: Find your next read
     body: A fresh "Today's book," mood-based collections, and the books people are reading right now.

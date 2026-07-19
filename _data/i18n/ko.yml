@@ -14,7 +14,7 @@ skip: 본문으로 건너뛰기
 hero:
   headline: Pilmie에서 함께 읽어요          # 캐논 슬로건
   sub: 독서를 기록하고, 연속일수를 쌓고, 리뷰를 나누는 독서 커뮤니티   # 캐논 한 줄 소개
-  lede: Pilmie는 당신이 읽는 모든 것을 담는 따뜻한 독서 공간이에요.     # Description 훅
+  lede: 읽고 싶은 마음은 그대로, 끝까지 읽는 습관까지. Pilmie는 읽은 책을 기록하고, 방해 없이 몰입해 읽고, 마음에 닿은 문장과 리뷰를 함께 나누는 독서 앱이에요.   # Description 훅
   # "무료"(다운로드 시점의 사실)만 노출한다. "광고 없음 · 구독 없음 · 인앱 결제 없음"
   # 같은 향후 약속은 넣지 말 것 — 수익화 여지를 막는다.
   meta: 무료 · iOS 16+ / Android
@@ -25,25 +25,30 @@ gallery:
   shots:
     - { file: 01-home,          caption: 홈,      alt: "Pilmie 홈 화면 — 오늘의 책, 독서 연속일수, 맞춤 추천" }
     - { file: 02-shelf,         caption: 서재,    alt: "Pilmie 서재 화면 — 읽고 싶어요·읽는 중·읽음으로 정리한 내 책" }
-    - { file: 03-profile,       caption: 프로필,  alt: "Pilmie 프로필 화면 — 독서 통계와 연속일수 기록" }
-    - { file: 04-review_detail, caption: 리뷰,    alt: "Pilmie 리뷰 화면 — 별점과 함께 남긴 책 리뷰와 댓글" }
-    - { file: 05-book_detail,   caption: 책 상세, alt: "Pilmie 책 상세 화면 — 별점 분포와 다른 독자들의 리뷰" }
+    - { file: 03-focus,         caption: 집중 독서, alt: "Pilmie 집중 독서 화면 — 몰입 타이머와 잔잔한 배경음악으로 방해 없이 읽기" }
+    - { file: 04-book_detail,   caption: 책 상세, alt: "Pilmie 책 상세 화면 — 별점 분포와 다른 독자들의 리뷰" }
+    - { file: 05-review_detail, caption: 리뷰,    alt: "Pilmie 리뷰 화면 — 별점과 함께 남긴 책 리뷰와 댓글" }
+    - { file: 06-profile,       caption: 프로필,  alt: "Pilmie 프로필 화면 — 독서 통계와 연속일수 기록" }
 
-# 기능 7블록 — 캐논 순서 고정. 순서를 바꾸지 말 것 (load-bearing).
+# 기능 8블록 — 캐논 순서 고정. 순서를 바꾸지 말 것 (load-bearing).
+# 차별점인 집중 독서를 2번째로 전진 배치 (store-listing.md 캐논).
 features_title: Pilmie에서 할 수 있는 것
 features:
   - icon: streak
     title: 이어지는 독서 습관
-    body: 매일 체크인하며 독서 연속일수를 쌓아보세요. 연간 목표를 정하고 완독한 책을 기록할 수 있어요.
+    body: 매일 체크인하며 독서 연속일수를 쌓아보세요. 연간 목표를 정하고 완독을 채워가요. 집중 독서 10분이면 그날 체크인도 자동으로.
+  - icon: focus
+    title: 몰입하는 집중 독서
+    body: 읽을 책을 고르고 타이머를 켜면, 잔잔한 배경음악과 함께 방해 없이 책에만 머물러요. 재생목록을 정리하거나 셔플로 틀어두고, 집중한 시간은 세션마다 통계로 쌓여요.
   - icon: shelf
     title: 나만의 서재
-    body: "모든 책을 '읽고 싶어요 · 읽는 중 · 읽음'으로 정리하고, 읽던 책은 바로 이어서."
-  - icon: review
-    title: 리뷰 쓰고 발견하기
-    body: 별점과 함께 리뷰를 남기고, 다른 독자들의 리뷰를 만나보세요. 최신순·좋아요순으로 정렬할 수 있어요.
+    body: "모든 책을 '읽고 싶어요 · 읽는 중 · 읽음'으로 정리하고, 쪽수나 퍼센트로 어디까지 읽었는지 기록해요. 완독한 책은 월별 독서 일지로 다시 펼쳐볼 수 있어요."
   - icon: highlight
     title: 마음에 남은 문장 수집
     body: 좋았던 문장을 하이라이트해 언제든 다시 보고, 예쁜 카드로 공유해요.
+  - icon: review
+    title: 별점과 리뷰
+    body: 읽은 책에 별점을 주고 솔직한 감상을 남겨요. 다른 독자들의 리뷰도 최신순·좋아요순으로 둘러볼 수 있어요.
   - icon: discover
     title: 다음에 읽을 책 발견
     body: "매일 바뀌는 '오늘의 책', 기분 따라 고르는 테마, 지금 사람들이 읽고 있는 책까지."
