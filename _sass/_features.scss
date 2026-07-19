@@ -1,4 +1,4 @@
-// 기능 7블록. 캐논 순서.
+// 기능 8블록. 캐논 순서.
 .features {
 	padding: var(--s-section) 0;
 	background: var(--bg);
@@ -28,15 +28,7 @@
 		box-shadow: var(--shadow-md);
 		border-color: var(--divider-strong);
 	}
-
-	// 7개 = 3열에서 마지막 1개가 홀로 남는다 → 마지막 카드를 가운데로.
-	@media (min-width: 1000px) {
-		&:last-child { grid-column: 2; }
-	}
-	// 2열에선 7번째가 홀로 남으므로 전체 폭으로.
-	@media (min-width: 680px) and (max-width: 999px) {
-		&:last-child { grid-column: 1 / -1; }
-	}
+	// 8개 = 3열(3·3·2)·2열(4행) 모두 균등하게 떨어져 마지막 카드 특수 정렬 불필요.
 }
 
 .feature-card__icon {
@@ -46,7 +38,7 @@
 	width: 44px;
 	height: 44px;
 	border-radius: var(--r-md);
-	// 브랜드 그라데이션의 옅은 틴트 + 앰버 아이콘
+	// 브랜드 그라데이션의 옅은 틴트 + 로즈 아이콘
 	background: color-mix(in srgb, var(--accent) 16%, transparent);
 	color: var(--accent);
 	margin-bottom: var(--s-lg);
